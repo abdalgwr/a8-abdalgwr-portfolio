@@ -1,0 +1,389 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+/*@import 'node_modules/modern-normalize/modern-normalize.css';  /*npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+/*@import "component1.css";  /* Component-specific stylesheets, if any.   */
+@import url(https://fonts.googleapis.com/css?family=Lora:400);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:700); /*heading font*/
+
+
+/*   ----- Variables  -----  */
+:root {
+    --petrol:rgb(108, 140, 153);
+    --brown:rgb(89,61,54);
+    --beige:rgb(255,239,225);
+    --olive:rgb(143,150,87);
+    --light-blue:rgb(199,236,245);
+    ;
+    --custom-embellishment-name:none;
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-image:url(images/background-sequoia-national-park-ca.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color:var(--brown);
+    font-family:'Lora'; /* Define text-weight font and fallback fonts. */
+    margin:5%;
+    padding: 1% 3% 3%;
+    width:auto;
+    max-width:80%;
+    line-height:1.5
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color:var(--beige);
+    padding:1%;   
+    border-top: 5px solid var(--petrol); 
+    text-align:center;
+  }
+  main {
+    background-color:rgba(89,61,54,.7);
+    padding:3%;
+    border-top: 5px solid var(--petrol); 
+  }
+  section {
+    background-color:var(--beige);
+    padding:1% 3% 3%;
+    margin:5%;
+  }
+  article {
+    padding:1%;
+    margin:5%;
+    overflow-x: auto; 
+  }
+  #topic1 {}
+  #topic2 {}
+  div {}
+  aside {}
+  footer {
+    text-align:center;
+    color:var(--beige);
+  }
+  
+/* ----- Anchor Styles (common for both global and local) ----- */
+/* ----- Navigation ----- Override text links for navigation only. */
+/* ----- Global Navigation Styles ----- */
+.add-icon{
+  align-items: center;
+  font-size: 1.5em; 
+  color: var(--brown); 
+}
+
+.add-icon:hover{
+    align-items: center;
+    font-size: 1.5em; 
+    color: var(--olive); 
+  }
+nav.global {
+  background-color: var(--beige);
+  text-align: center;
+  padding: 2%;
+  border-top: 5px solid var(--petrol);
+  flex-flow: row wrap;
+}
+
+nav.global a {
+  border-radius: 5px;
+  color: var(--brown);
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+}
+
+nav.global a:hover {
+  background-color: rgba(108, 140, 153, 0.2);
+}
+
+nav.global a:visited {
+  color: var(--petrol); 
+}
+
+/* ----- Local Navigation Styles ----- */
+nav.local {
+  background-color: var(--brown);
+  text-align: center;
+  padding: 2%;
+  border-top: 5px solid var(--petrol);
+  flex-flow: row wrap;
+}
+
+nav.local a {
+  border-radius: 5px;
+  color: var(--beige);
+  font-weight: bold;
+  margin: 0;
+  padding: 3px 20px 5px 20px;
+  text-decoration: none;
+}
+
+nav.local a:hover {
+  background-color: rgba(143,150,87, 0.3);
+}
+
+nav.local a:visited {
+  color: var(--olive); 
+}
+
+
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {
+    padding: 5px;
+    font-weight: bold;
+
+  }
+  dd {}
+  
+  h1, h2, h3, h4, h6 {
+    font-family: 'Playfair Display', serif; /* Heading font */
+  } 
+  h1 {
+    }
+  h2 {
+    border-top: 5px solid var(--petrol); 
+    text-align:center;
+    padding-top: 4%;
+
+  }
+  h3 {
+    padding-left: 2%;
+    background-color:rgba(199,236,245, .5);
+  }
+  h4 {}
+  h5 {
+    
+  }
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.project-table {
+    width: 100%;
+    max-width: 100%;
+}
+caption {
+  font-weight: bold;
+  padding: 10px;
+  background-color: var(--beige);
+  color: var(--brown);
+}
+
+thead, tbody {
+  background-color: var(--beige);
+}
+
+tr th, tr td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(143,150,87,.4);
+  color: var(--brown);
+  border-bottom: 1px solid var(--olive);
+  border-top: 1px solid var(--olive);
+
+}
+
+td {
+  border-bottom: 1px solid var(--olive);
+}
+
+#amount {
+  padding: 5px;
+  border: 1px solid var(--olive);
+}
+
+#submit button {
+  padding: 10px;
+  border: 2px solid var(--olive);
+  background-color: var(--beige);
+  color: var(--brown);
+}
+
+#submit button:hover {
+  background-color: var(--brown);
+  color: var(--beige);
+}
+
+  tfoot {}
+  tr {}
+    tr:nth-child(even) {}
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form, button, select, textarea {
+    font-family:inherit;
+    display:flex;
+    flex-flow: wrap;
+    color:var(--brown);
+    padding:2%;
+    font-size:medium;
+  }
+  fieldset {
+    border: 2px solid var(--petrol);
+    background-color: rgba(108, 140, 153, 0.2);
+    margin-bottom: 4%;
+    margin-right:2%;
+    display: block;
+  }
+    legend {
+      color:var(--brown);
+      font-size: large;
+      font-weight: bold;
+    }
+  label {
+    display:block;
+    margin-top:3%;
+  }
+  button {
+    font-size: large;
+    background-color: var(--beige);
+    border-color: var(--olive);
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  button:hover {
+    color: var(--beige);
+    background-color: var(--brown);
+  }
+  input {
+    font-family:inherit;
+    color:var(--brown);
+    padding:2%;
+    font-size:medium;
+    margin-right: auto;
+    max-width: max-content;
+  }
+  :focus{
+    background-color:var(--beige);
+}
+*:required {
+  border:1px solid var(--olive);
+}
+
+label.required:after {
+  content:" *";
+  color:red;
+}
+  select {
+    border:1px solid var(--olive);
+
+  }
+    optgroup {}
+    option {}
+  textarea {
+    width: 95%;
+    height: 300px; 
+  }
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  .gallery { 
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .gallery figure {
+    width: 320px;
+    margin:.75%;
+    padding:0;
+    border:1px solid var(--brown);
+  }
+  .gallery img {
+    width:100%;
+  }
+  .gallery figcaption {
+    display:block;
+    padding:3px;
+  }
+  
+ /* svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {} */
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  /*.gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}*/
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
